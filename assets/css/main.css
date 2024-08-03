@@ -7,26 +7,52 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* ORIGINAL Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* :root {  */
+  /*--background-color: #0c0b09;  Background color for the entire website, including individual sections */
+  /* --background-color: #050505; */
+  /*--default-color: rgba(255, 255, 255, 0.7);  Default color used for the majority of the text content across the entire website */
+  /*--heading-color: #ffffff;  Color for headings, subheadings and title throughout the website */
+  /*--accent-color: #cda45e;    Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  /* --surface-color: #29261f; The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  /*--contrast-color: #0c0b09;  Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+/* } */
+
+
+
+/* TEST FOR DIFFRENT COLOR */
 :root { 
   /*--background-color: #0c0b09;  Background color for the entire website, including individual sections */
   --background-color: #050505;
   --default-color: rgba(255, 255, 255, 0.7); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #cda45e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #cda45e;   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #29261f; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #0c0b09; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+
+/* ORIGINAL Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* :root { */
+  /* --nav-color: #ffffff;  The default color of the main navmenu links */
+  /* --nav-hover-color: #cda45e; Applied to main navmenu links when they are hovered over or active */
+  /* --nav-mobile-background-color: #29261f; Used as the background color for mobile navigation menu */
+  /* --nav-dropdown-background-color: #29261f; Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  /* --nav-dropdown-color: #ffffff; Used for navigation links of the dropdown items in the navigation menu. */
+  /* --nav-dropdown-hover-color: #cda45e; Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+/* } */
+
+/* TEST FOR DIFFRENT COLOR */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #cda45e; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #6ff30a; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #29261f; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #29261f; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #cda45e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
+
+
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
@@ -297,8 +323,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  max-height: 80px;
+  margin-right: 10px;
 }
 
 .header .logo h1 {
@@ -366,10 +392,10 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
-    font-size: 14px;
+    padding: 9px 9px;
+    font-size: 16px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -607,7 +633,7 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 30px;
   margin-right: 6px;
 }
 
@@ -1083,8 +1109,9 @@ section,
 }
 
 .about .about-img:hover {
-  transform: scale(1.03);
+  transform: scale(1.001);
 }
+
 
 /*--------------------------------------------------------------
 # Why Us Section
@@ -1096,6 +1123,17 @@ section,
   height: 100%;
   position: relative;
 }
+.why_us_icon{
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  display: block;
+
+}
+
 
 .why-us .card-item span {
   color: var(--accent-color);
@@ -1108,7 +1146,8 @@ section,
   font-size: 24px;
   font-weight: 600;
   padding: 0;
-  margin: 20px 0;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .why-us .card-item h4 a {
@@ -1120,11 +1159,13 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .why-us .card-item:hover {
   background: var(--accent-color);
   padding: 30px 30px 70px 30px;
+  
 }
 
 .why-us .card-item:hover span,
@@ -1652,37 +1693,48 @@ section,
 .contact {
   background-color: color-mix(in srgb, var(--background-color) 90%, white 5%);
   border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
+  
 }
 
 .contact .info-item+.info-item {
   margin-top: 40px;
+  
+  
+}
+.maps{
+  margin-bottom: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
+
 }
 
 .contact .info-item i {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
+  font-size: 30px;
+  width: 55px;
+  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
-  margin-right: 15px;
+  margin-right: 20px;
+  
 }
 
 .contact .info-item h3 {
   padding: 0;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 700;
   margin-bottom: 5px;
+  
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .contact .php-email-form {
@@ -1806,7 +1858,7 @@ section,
 
 
 /* logo grey hover color */
-.logo {
+/* .logo {
   font-size: 8em;
   filter: grayscale(100%);
   transition: filter 450ms ease;
@@ -1821,19 +1873,19 @@ section,
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* Decorative styles */
 /* body {
   display: grid;
   place-items: center;
-} */
+}
 
 
-/* logo bg div */
+/* logo bg div 
 .logobg {
   display: grid;
   grid-template-rows: repeat(2, 50%);
   grid-template-columns: repeat(4, 33%);
   gap: 2px;
-}
+} */
