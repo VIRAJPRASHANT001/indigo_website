@@ -323,7 +323,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 80px;
+  max-height: 60px;
   margin-right: 10px;
 }
 
@@ -972,7 +972,7 @@ section,
 }
 
 .hero img {
-  position: absolute;
+  position:absolute;
   inset: 0;
   display: block;
   width: 100%;
@@ -997,8 +997,8 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 80px;
+  font-weight: 600;
 }
 
 .hero h2 span {
