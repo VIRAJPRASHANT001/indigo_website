@@ -1086,7 +1086,11 @@ section,
 }
 
 .about .content .fst-italic {
-  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+  margin-top: 40px;
+  color: white
+  
+  /* color-mix(in srgb, var(--default-color), var(--contrast-color) 0%); */
+  
 }
 
 .about .content ul {
@@ -1101,9 +1105,9 @@ section,
 
 .about .content ul i {
   color: var(--accent-color);
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   line-height: 1.2;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .about .content p:last-child {
