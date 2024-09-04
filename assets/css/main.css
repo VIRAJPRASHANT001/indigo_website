@@ -7,7 +7,7 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* ORIGINAL Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* ORIGINAL Global Colors - The following color variables are used throughout the websitename. Updating them here will change the color scheme of the entire website */
 /* :root {  */
   /*--background-color: #0c0b09;  Background color for the entire website, including individual sections */
   /* --background-color: #050505; */
@@ -240,11 +240,15 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(12, 11, 9, 0.61);
+   --background-color: #465d9194; /*rgb(192, 80, 39); */
   color: var(--default-color);
   transition: all 0.5s;
   /* z-index: 997; */
   width: 100%;
+}
+.header .sitename {
+color: #6ff30a;
+font-size: 10px
 }
 
 .header .topbar {
@@ -271,7 +275,7 @@ h6 {
 
   .header .topbar .contact-info i a,
   .header .topbar .contact-info i span {
-    font-size: 13px;
+    font-size: 1px;
   }
 }
 
@@ -316,7 +320,7 @@ h6 {
 .header .branding {
   background-color: var(--background-color);
   min-height: 60px;
-  padding: 10px 0;
+  padding: 9px 0;
   transition: 0.3s;
   border-bottom: 1px solid var(--background-color);
 }
@@ -325,17 +329,25 @@ h6 {
   line-height: 10px;
 }
 
-.header .logo img {
-  max-height: 60px;
+.header .logo img { 
+  max-height: 100px;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 25px;
+  /* font-family; */
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
 }
+
+/* .header .logo p {
+font-size: small;
+font-weight: 200;
+text-align-last: right;
+} */
 
 .header .btn-contact-us,
 .header .btn-contact-us:focus {
@@ -369,10 +381,11 @@ margin-top: 8px;
 .scrolled .header .branding {
   border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
+
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #0c0b09;
+  --background-color: #1c1919;
 }
 
 /*--------------------------------------------------------------
@@ -382,14 +395,15 @@ margin-top: 8px;
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    
   }
 
   .navmenu ul {
-    margin: 0;
+    margin: 10px;
     padding: 0;
     display: flex;
     list-style: none;
-    align-items: center;
+    align-items: left;
   }
 
   .navmenu li {
@@ -461,7 +475,8 @@ margin-top: 8px;
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+    /* color: var(--nav-dropdown-hover-color); */
+    color: rgb(6, 255, 39);
   }
 
   .navmenu .dropdown:hover>ul {
@@ -972,22 +987,23 @@ section,
   width: 100%;
   min-height: 120vh;
   position: relative;
-  padding: 8px 0PX;
+  padding: 8px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--default-color);
+  overflow: hidden; /* Ensure the image doesn't overflow */
 }
 
 .hero img {
-  position:absolute;
+  position: absolute;
   inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center; /* Focus on the center of the image */
   z-index: 1;
-  
 }
 
 .hero:before {
@@ -1002,12 +1018,11 @@ section,
   position: relative;
   z-index: 3;
   margin-top: 80px;
-  
 }
 
 .hero h2 {
-  margin: 0;
-  font-size: 80px;
+  margin: 0;  
+  font-size: 60px;
   font-weight: 600;
 }
 
@@ -1017,7 +1032,7 @@ section,
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 10px 0 0 0;
+  margin: 8px 0 0 0;
   font-size: 24px;
 }
 
@@ -1031,7 +1046,7 @@ section,
   display: inline-block;
   padding: 8px 30px;
   border-radius: 50px;
-  transition: 0.3s;
+  transition: 0s;
   flex-shrink: 0;
 }
 
@@ -1047,6 +1062,18 @@ section,
   .hero .cta-btn {
     font-size: 12px;
   }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero img {
+    object-position: center top; /* Focus on the top-center for mobile view */
+  }
 }
 
 @media (max-width: 768px) {
@@ -1057,7 +1084,12 @@ section,
   .hero p {
     font-size: 18px;
   }
+
+  .hero img {
+    object-position: center top; /* Focus on the top-center for tablet view */
+  }
 }
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1084,13 +1116,29 @@ section,
 }
 
 .about .content h3 {
-  font-size: 1.75rem;
+  font-size: 1.71rem;
   font-weight: 700;
 }
+.about .content button{
+  background-color:#6ff30a;
+  color: rgb(3, 3, 3);
+  font-weight: bold;
+  font-size:medium;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding: 20px;
+ 
+}
+
+.about .content button:hover{
+background-color: var(--accent-color);
+color:rgb(0, 0, 0);
+}
+
 
 .about .content .fst-italic {
   margin-top: 40px;
-  color: white
+  color: white;
   
   /* color-mix(in srgb, var(--default-color), var(--contrast-color) 0%); */
   
@@ -1115,6 +1163,7 @@ section,
 
 .about .content p:last-child {
   margin-bottom: 0;
+  font-size: larger;
 }
 
 .about .about-img {
@@ -1179,7 +1228,11 @@ section,
 .why-us .card-item:hover {
   background: var(--accent-color);
   padding: 30px 30px 70px 30px;
-  box-shadow: 10px 15px 10px rgb(92, 90, 90);
+  /* box-shadow:inset 0 3em 3em rgb(168, 50, 50),
+    0 0 0 2px rgb(168, 50, 50),
+    0.3em 0.3em 1em rgb(168, 50, 50); */
+
+  /* box-shadow: 10px 15px 10px rgb(92, 90, 90);  */
   
 }
 
@@ -1187,6 +1240,7 @@ section,
 .why-us .card-item:hover h4 a,
 .why-us .card-item:hover p {
   color: var(--contrast-color);
+ 
 }
 
 /*--------------------------------------------------------------
@@ -1442,74 +1496,6 @@ section,
   background-color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Book A Table Section
---------------------------------------------------------------*/
-.book-a-table .reservation-img {
-  min-height: 500px;
-  background-size: cover;
-  background-position: center;
-}
-
-.book-a-table .reservation-form-bg {
-  background: color-mix(in srgb, var(--default-color), transparent 97%);
-}
-
-.book-a-table .php-email-form {
-  padding: 30px;
-}
-
-@media (max-width: 575px) {
-  .book-a-table .php-email-form {
-    padding: 20px;
-  }
-}
-
-.book-a-table .php-email-form input[type=text],
-.book-a-table .php-email-form input[type=email],
-.book-a-table .php-email-form input[type=number],
-.book-a-table .php-email-form input[type=date],
-.book-a-table .php-email-form input[type=time],
-.book-a-table .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 20%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.book-a-table .php-email-form input[type=text]:focus,
-.book-a-table .php-email-form input[type=email]:focus,
-.book-a-table .php-email-form input[type=number]:focus,
-.book-a-table .php-email-form input[type=date]:focus,
-.book-a-table .php-email-form input[type=time]:focus,
-.book-a-table .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.book-a-table .php-email-form input[type=text]::placeholder,
-.book-a-table .php-email-form input[type=email]::placeholder,
-.book-a-table .php-email-form input[type=number]::placeholder,
-.book-a-table .php-email-form input[type=date]::placeholder,
-.book-a-table .php-email-form input[type=time]::placeholder,
-.book-a-table .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.book-a-table .php-email-form button[type=submit] {
-  color: var(--default-color);
-  border: 2px solid var(--accent-color);
-  background: transparent;
-  padding: 14px 60px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.book-a-table .php-email-form button[type=submit]:hover {
-  background: var(--accent-color);
-}
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1598,22 +1584,6 @@ section,
   background-color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Gallery Section
---------------------------------------------------------------*/
-.gallery .gallery-item {
-  overflow: hidden;
-  border-right: 3px solid var(--background-color);
-  border-bottom: 3px solid var(--background-color);
-}
-
-.gallery .gallery-item img {
-  transition: all ease-in-out 0.4s;
-}
-
-.gallery .gallery-item:hover img {
-  transform: scale(1.1);
-}
 
 /*--------------------------------------------------------------
 # Board Section
@@ -1702,97 +1672,6 @@ section,
   transition: bottom ease-in-out 0.4s;
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-/* .contact {
-  background-color: color-mix(in srgb, var(--background-color) 90%, white 5%);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
-  
-}
-
-.contact .info-item+.info-item {
-  margin-top: 40px;
-  
-  
-}
-.maps{
-  margin-bottom: 50px;
-  margin-right: 30px;
-  margin-left: 30px;
-
-}
-
-.contact .info-item i {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-size: 30px;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 20px;
-  
-}
-
-.contact .info-item h3 {
-  padding: 0;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 20px;
-}
-
-.contact .php-email-form {
-  height: 100%;
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--default-color);
-  background: none;
-  border: 2px solid var(--accent-color);
-  padding: 8px 36px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: var(--accent-color);
-} */
-
 
 /* chat gpt contact us design */
 /*--------------------------------------------------------------
@@ -1863,8 +1742,6 @@ section,
     height: 45px;
   }
 }
-
-/* CHAT GPT CONTACT US SECTION STYL ENDS */
 
 /*--------------------------------------------------------------
 # Starter Section Section
@@ -1943,37 +1820,3 @@ section,
     max-width: 90%;
   }
 }
-
-
-/* logo grey hover color */
-/* .logo {
-  font-size: 8em;
-  filter: grayscale(100%);
-  transition: filter 450ms ease;
-}
-
-.logo:is(:hover, :focus) {
-  filter: grayscale(0%) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* Decorative styles */
-/* body {
-  display: grid;
-  place-items: center;
-}
-
-
-/* logo bg div 
-.logobg {
-  display: grid;
-  grid-template-rows: repeat(2, 50%);
-  grid-template-columns: repeat(4, 33%);
-  gap: 2px;
-} */
