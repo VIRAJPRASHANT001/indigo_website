@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1d1b1b;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.faq-section {
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 13000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.faq-header,
+.faq-content {
+    width: 48%;
+    margin-bottom: 40px;
+}
+
+.faq-header {
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.faq-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.faq-header p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    display:inline;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration:double;
+    animation: fadeInUp 1.2s ease-in-out;
+    
+}
+
+.faq-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    animation: fadeIn 1.5s ease-in-out;
+    color: #111;
+    /* -webkit-filter: drop-shadow(12px 12px 7px rgba(202, 127, 7, 0.5));
+         filter: drop-shadow(1px 1px 17px rgb(191, 134, 13));*/
+} 
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    
+}
+.image2{
+    margin-top: 0px;
+}
+
+.accordion-item {
+    background-color: #393535;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover,
+.accordion-item.active {
+    background-color: #0a0a0a;
+    box-shadow: 0px 0px 7px rgb(249, 249, 249);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    background-color: #222;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+/* .accordion-header:hover {
+background-color: #c16311;
+color: #c16311;
+} */
+/* Hover effect on accordion headers */
+.accordion-header:hover {
+    background-color: #c16311;
+    color: #c16311;
+}
+
+/* Active state (when the item is expanded) */
+.accordion-item.active .accordion-header {
+    background-color: #c16311;
+    color: #c16311;
+}
+
+.accordion-header h3 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.accordion-header i {
+    font-size: 1rem;
+    color: #f7f4f4ef;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-body {
+    padding: 20px;
+    background-color: #3f3b3b;
+    color: #ddd;
+    display: none;
+}
+.accordion-body:hover{
+background-color: #751919;
+font-style: #943333;
+
+}
+.accordion-body ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.accordion-body ul li {
+    list-style-type: disc;
+}
+
+.accordion-item.active .accordion-body {
+    display: block;
+}
+
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .faq-header,
+    .faq-content {
+        width: 100%;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- <div id="header"></div> -->
+    <section class="faq-section">
+        
+        <div class="container">
+            <div class="faq-header">
+                <img src="assets/img/FAQ.jpg" class="faq-image" alt="FAQ">
+                <h2>Some Frequently Asked Questions</h2>
+                <p>If you need any help, please don't hesitate to reach out to us or contact us via email.</p>
+                <a href="#!" class="contact-btn">Contact us</a>
+            </div>
+            <div class="faq-content">
+                <!-- <div class="image2">
+                    <img src="assets/img/faq2-Photoroom.png" class="faq-image" alt="FAQ">
+                </div> -->
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingOne">
+                            <h3>Is "Indigo catering & services Pvt. Ltd." associated with Indigo Airlines or Indigo paints?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>No, we are not associated with any of these companies.</p>
+                            <ul>
+                                <li>We are an independent company registered under this name with the registrar of companies since 2008.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        
+                        <div class="accordion-header" id="headingTwo">
+                            <h3>What is Indigo Business Support Services?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>It includes a range of support services such as Building Maintenance, Food Services, and Logistics provided by associated companies.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingThree">
+                            <h3>Who can join Indigo?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Anyone over 18, with a clean police record.</p>
+                            <ul>
+                                <li>Freshers can also apply through government programs.</li>
+                                <li>Through NAPS & NATS.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingFour">
+                            <h3>What are the growth prospects for employees?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>We offer training and prefer internal candidates for promotions.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingFive">
+                            <h3>What benefits do employees receive?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Employees at Indigo receive a number of benefits.</p>
+                            <ul>
+                                <li>We comply with all labor laws.</li>
+                                <li>We respect minimum living standards.</li>
+                                <li>Food entitlements.</li>
+                                <li>Further details are available on our website.</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingsix">
+                            <h3>How can customers contact Management Directly ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Contact details are provided on our website.</p>
+                            <ul>
+                                <li>Feel free to reach out to us.</li>
+                                <li>or you can fill the contact form and we will get in touch with you shortly</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <div id="footer"></div>
+
+    <script>
+        // Load header and footer
+        // document.getElementById("header").innerHTML = '<object type="text/html" data="header& footer.html" ></object>';
+        // document.getElementById("footer").innerHTML = '<object type="text/html" data="footer.html" ></object>';
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener("click", function() {
+                    const accordionItem = this.parentElement;
+
+                    // Toggle active class
+                    accordionItem.classList.toggle("active");
+
+                    // Collapse other items
+                    const otherItems = document.querySelectorAll(".accordion-item");
+                    otherItems.forEach(item => {
+                        if (item !== accordionItem) {
+                            item.classList.remove("active");
+                            item.querySelector(".accordion-body").style.display = "none";
+                        }
+                    });
+
+                    // Toggle visibility of the current item's body
+                    const accordionBody = accordionItem.querySelector(".accordion-body");
+                    if (accordionItem.classList.contains("active")) {
+                        accordionBody.style.display = "block";
+                    } else {
+                        accordionBody.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Basic styles */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .faq-section {
+            padding: 60px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .faq-header p {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .faq-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        .accordion-item {
+            background-color: #111;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            cursor: pointer;
+            background-color: #222;
+            animation: fadeInUp 0.8s ease-in-out;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .accordion-header h3 {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .accordion-header i {
+            font-size: 1rem;
+            color: #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .accordion-body {
+            padding: 20px;
+            background-color: #333;
+            color: #ddd;
+            display: none;
+        }
+
+        .accordion-body ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .accordion-body ul li {
+            list-style-type: disc;
+        }
+
+        /* Hover effect on accordion headers */
+        .accordion-header:hover {
+            background-color: #444;
+            color: #fff;
+        }
+
+        /* Active state (when the item is expanded) */
+        .accordion-item.active .accordion-header {
+            background-color: #444;
+            color: #fff;
+        }
+
+        .accordion-item.active .accordion-header i {
+            transform: rotate(180deg);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <img src="assets/img/FAQ.jpg" class="faq-image" alt="FAQ">
+                <h2>How can we help you? You have Questions About us, We got your FAQs answered.</h2>
+                <p>We hope you have found an answer to your question. If you need any help, please don't hesitate to reach out to us or contact us via email.</p>
+                <a href="#!" class="contact-btn">Contact us</a>
+            </div>
+            <div class="faq-content">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingOne">
+                            <h3>Is "Indigo catering & services Pvt. Ltd." associated with Indigo Airlines or Indigo paints?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>No, we are not associated with any of these companies.</p>
+                            <ul>
+                                <li>We are an independent company registered under this name with the registrar of companies since 2008.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingTwo">
+                            <h3>What is Indigo Business Support Services?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>It includes a range of support services such as Building Maintenance, Food Services, and Logistics provided by associated companies.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingThree">
+                            <h3>Who can join Indigo?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Anyone over 18, with a clean police record.</p>
+                            <ul>
+                                <li>Freshers can also apply through government programs.</li>
+                                <li>Through NAPS & NATS.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingFour">
+                            <h3>What are the growth prospects for employees?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>We offer training and prefer internal candidates for promotions.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingFive">
+                            <h3>What benefits do employees receive?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Employees at Indigo receive a number of benefits.</p>
+                            <ul>
+                                <li>We comply with all labor laws.</li>
+                                <li>We respect minimum living standards.</li>
+                                <li>Food entitlements.</li>
+                                <li>Further details are available on our website.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        // Load header and footer
+        document.getElementById("header").innerHTML = '<object type="text/html" data="header.html" ></object>';
+        document.getElementById("footer").innerHTML = '<object type="text/html" data="footer.html" ></object>';
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener("click", function() {
+                    const accordionItem = this.parentElement;
+
+                    // Toggle active class
+                    accordionItem.classList.toggle("active");
+
+                    // Collapse other items
+                    const otherItems = document.querySelectorAll(".accordion-item");
+                    otherItems.forEach(item => {
+                        if (item !== accordionItem) {
+                            item.classList.remove("active");
+                            item.querySelector(".accordion-body").style.display = "none";
+                        }
+                    });
+
+                    // Toggle visibility of the current item's body
+                    const accordionBody = accordionItem.querySelector(".accordion-body");
+                    if (accordionItem.classList.contains("active")) {
+                        accordionBody.style.display = "block";
+                    } else {
+                        accordionBody.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> -->
