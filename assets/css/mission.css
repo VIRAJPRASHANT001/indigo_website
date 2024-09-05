@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fefefe;
+    padding: 0%;
+}
+.container{
+    padding: 0%;
+}
+.vision-box {
+    background-color: #282626; /* Orange background */
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 8px;
+    animation: fadeInLeft 1s ease-in-out;
+    /* box-shadow:inset 0 0em 2em rgb(175, 141, 2),
+    0 0 2px 2px rgb(140, 94, 3),
+    0.3em 0.3em 1em rgb(70, 63, 51); */
+}
+.vision-box:hover {
+    box-shadow:inset 0 0em 2em rgb(239, 161, 5),
+    0 0 2px 2px rgb(239, 161, 5),
+    0.3em .4em 5em rgb(210, 173, 10);
+    background-color: #c37e16;
+}
+.mission-box {
+    /*background-color: #a00e0ed2;  Red background */
+    background-color: #282624;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    animation: fadeInRight 1s ease-in-out;
+    /* box-shadow:inset 0 0em 2em rgb(235, 33, 7),inner/inverted padding */
+     /* 0 0 2px 2px rgb(194, 31, 31), border */
+   /* 0em 0em 1em rgb(195, 90, 90);  shadow */
+} 
+
+.mission-box:hover{
+    box-shadow:inset 0 0em 2em rgb(123, 50, 30),
+    0 0 2px 2px rgb(144, 35, 35),
+    0.3em .4em 5em rgb(110, 34, 21);
+    background-color: #c37e16;
+}
+
+.content-box h2 {
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+   
+}
+.content-box p {
+font-weight: 1000;
+
+}
+
+/* .content-box p:hover{
+    
+} */
+
+.container-image{
+    background-color: aqua;
+}
+
+.icon {
+    max-width: 80%;
+    animation: zoomIn 1s ease-in-out;
+}
+
+/* Logo Styling */
+.logo {
+    max-width: 150px; /* Adjust size as needed */
+    animation: fadeInUp 1s ease-in-out;
+    border-radius: 50%; /* Optional: Make it circular */
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
