@@ -440,6 +440,7 @@ margin-top: 8px;
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
+    font-size: 18px;
   }
 
   .navmenu .dropdown ul {
