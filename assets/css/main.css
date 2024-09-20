@@ -1230,7 +1230,7 @@ color:rgb(0, 0, 0);
 
 /* company overview */
 .companyoverview {
-  background-image: url('assets/img/group\ photo\ indigo.JPG'); /* Add your background image path */
+  background-image: url('assets/img/group photo indigo.JPG"'); /* Add your background image path */
   background-size: cover;
   background-position: center;
   background-attachment:scroll;/* Optional: Parallax effect, fixed*/
