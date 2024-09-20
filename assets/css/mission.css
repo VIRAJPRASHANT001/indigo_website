@@ -1,38 +1,50 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fefefe;
-    padding: 0%;
+
+.vision_mission{
+    padding-top:120px;
+
 }
-.container{
-    padding: 0%;
-}
+
+
 .vision-box {
-    background-color: #282626; /* Orange background */
+    background-color: #575050; /* Orange background */
     color: rgb(255, 255, 255);
-    padding: 30px;
+    padding: 40px;
     border-radius: 8px;
     animation: fadeInLeft 1s ease-in-out;
     /* box-shadow:inset 0 0em 2em rgb(175, 141, 2),
     0 0 2px 2px rgb(140, 94, 3),
     0.3em 0.3em 1em rgb(70, 63, 51); */
 }
+.vision-box ul li{
+    font-weight: 1000;
+    font-size:20px;
+}
 .vision-box:hover {
     box-shadow:inset 0 0em 2em rgb(239, 161, 5),
     0 0 2px 2px rgb(239, 161, 5),
     0.3em .4em 5em rgb(210, 173, 10);
     background-color: #c37e16;
+    
+}
+
+.vision-box ul li:hover{
+    color: #e02937;
 }
 .mission-box {
     /*background-color: #a00e0ed2;  Red background */
     background-color: #282624;
     color: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: 8px;
     animation: fadeInRight 1s ease-in-out;
     /* box-shadow:inset 0 0em 2em rgb(235, 33, 7),inner/inverted padding */
      /* 0 0 2px 2px rgb(194, 31, 31), border */
    /* 0em 0em 1em rgb(195, 90, 90);  shadow */
 } 
+.mission-box ul li{
+    font-weight: 1000;
+    font-size:20px;
+}
 
 .mission-box:hover{
     box-shadow:inset 0 0em 2em rgb(123, 50, 30),
@@ -40,15 +52,19 @@ body {
     0.3em .4em 5em rgb(110, 34, 21);
     background-color: #c37e16;
 }
+.mission-box ul li:hover{
+    color: #2954e0;
+}
 
 .content-box h2 {
-    font-weight: 700;
+    font-weight: 800;
     color: rgb(255, 255, 255);
+    font-size: 60px;
    
 }
 .content-box p {
 font-weight: 1000;
-
+font-size:20px;
 }
 
 /* .content-box p:hover{
@@ -65,11 +81,11 @@ font-weight: 1000;
 }
 
 /* Logo Styling */
-.logo {
-    max-width: 150px; /* Adjust size as needed */
+/*.logo {
+    max-width: 150px;  Adjust size as needed 
     animation: fadeInUp 1s ease-in-out;
-    border-radius: 50%; /* Optional: Make it circular */
-}
+    border-radius: 50%;  Optional: Make it circular 
+}*/
 
 @keyframes fadeInLeft {
     0% {
@@ -113,4 +129,123 @@ font-weight: 1000;
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.corevaluecontainer {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.corevalueheader {
+    margin: 20px 0;
+}
+.corevalueheader h1 {
+    font-size: 2.5em;
+    color: #0b64d2;
+}
+.corevalueheader h2 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-top: -15px;
+    background-color: #e02937;
+    margin-left: 350px;
+    margin-right: 350px;
+    border-radius: 20px;
+}
+.logos {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.logos img {
+    height: 100px;
+    margin: 0 15px;
+}
+.values {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.value-card {
+    width: 15%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.value-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0px;
+}
+.value-card h3 {
+    font-size: 1.2em;
+    
+    color: #033470;
+    font-weight: 800;
+}
+.value-card p {
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #483333;
+    font-weight: bold;
+}
+.value-card.integrity {
+    background-color: #f7f7f8;
+}
+.value-card.financial-discipline {
+    background-color: #fbd38d;
+}
+.value-card.respect {
+    background-color: #e5c3e5;
+}
+.value-card.trust {
+    background-color: #d0e6a5;
+}
+.value-card.environment {
+    background-color: #bbdefb;
+}
+
+.image-box {
+position: relative;
+width: 300px; /* Adjust the width as needed */
+height: 300px; /* Adjust the height as needed */
+overflow: hidden;
+text-align: center;
+}
+
+.image-box .image {
+width: 100%;
+height: 100%;
+transition: opacity 0.5s ease;
+}
+
+.image-box .overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 0.9); /* Light background on hover */
+opacity: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transition: opacity 0.5s ease;
+}
+
+.image-box .overlay .logo {
+max-width: 50%;
+max-height: 50%;
+margin-bottom: 10px;
+}
+
+.image-box:hover .image {
+opacity: 0;
+}
+
+.image-box:hover .overlay {
+opacity: 1;
 }

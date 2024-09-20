@@ -26,7 +26,7 @@
   --background-color: #050505;
   --default-color: rgba(255, 255, 255, 0.7); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #cda45e;   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #44fdde;   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #29261f; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #0c0b09; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -329,8 +329,8 @@ font-size: 10px
   line-height: 10px;
 }
 
-.header .logo img { 
-  max-height: 100px;
+.header .logo img {  
+  max-height: 80px;
   margin-right: 10px;
   border-radius: 5px;
 }
@@ -440,6 +440,7 @@ margin-top: 8px;
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
+    font-size: larger;
   }
 
   .navmenu .dropdown ul {
@@ -477,6 +478,7 @@ margin-top: 8px;
   .navmenu .dropdown ul li:hover>a {
     /* color: var(--nav-dropdown-hover-color); */
     color: rgb(6, 255, 39);
+    font-size: larger;
   }
 
   .navmenu .dropdown:hover>ul {
@@ -800,7 +802,7 @@ margin-top: 8px;
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+ #preloader {
   position: fixed;
   inset: 0;
   z-index: 999999;
@@ -810,7 +812,7 @@ margin-top: 8px;
 }
 
 #preloader:before {
-  content: "";
+  content: " ";
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
@@ -830,7 +832,52 @@ margin-top: 8px;
   100% {
     transform: rotate(360deg);
   }
+}  
+
+/* .loading {
+  font-size: 84px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  span {
+    display: inline-block;
+    margin: 0 -.05em;
+  }
 }
+
+.loading07 {
+  span {
+    position: relative;
+    color: rgba(#000, .2);
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: attr(data-text);
+      color: #a32d2d;
+      opacity: 0;
+      transform: scale(1.5);
+      animation: loading07 3s linear infinite;
+    }
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i+1})::after {
+        animation-delay: #{$i*.1}s;
+      }
+    }
+  }
+}
+@keyframes loading07 {
+  0%, 75%, 100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  25%, 50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1183,12 +1230,14 @@ color:rgb(0, 0, 0);
 
 /* company overview */
 .companyoverview {
-  /* background: url("../img/about-bg.jpg") center center; */
+  background-image: url('/assets/img/group\ photo\ indigo.JPG'); /* Add your background image path */
   background-size: cover;
+  background-position: center;
+  background-attachment:scroll;/* Optional: Parallax effect, fixed*/
   position: relative;
   padding-top: 40px;
-  /* padding: 20px 0; */
 }
+
 
 .companyoverview:before {
   content: "";
@@ -1208,8 +1257,13 @@ color:rgb(0, 0, 0);
   font-weight: 700;
 }
 .companyoverview .content h3 {
-  font-size: 1.71rem;
+  font-size: 2.71rem;
   font-weight: 700;
+}
+.companyoverview .content p {
+  /* font-size: 2.71rem; */
+  font-size: 25px;
+  font-weight: 600;
 }
 .companyoverview .content button{
   background-color:#6ff30a;
@@ -1224,7 +1278,7 @@ color:rgb(0, 0, 0);
 
 .companyoverview .content button:hover{
 background-color: var(--accent-color);
-color:rgb(0, 0, 0);
+color:rgb(101, 94, 94);
 }
 
 
@@ -1255,10 +1309,10 @@ color:rgb(0, 0, 0);
   font-size: 1rem;
 }
 
-.companyoverview .content p:last-child {
+/* .companyoverview .content p:last-child {
   margin-bottom: 0;
   font-size: larger;
-}
+} */
 
 .companyoverview .companyoverview-img {
   border: 0px solid color-mix(in srgb, var(--default-color), transparent 80%);
@@ -1268,6 +1322,71 @@ color:rgb(0, 0, 0);
 .companyoverview .companyoverview-img:hover {
   transform: scale(1.001);
 }
+
+/* Ensure the wave container is positioned correctly */
+.wave-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Increase the height to fit multiple wave layers */
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 150px;
+  fill-opacity: 0.5; /* Semi-transparent for a better overlapping effect */
+}
+
+.wave1 {
+  fill: #0a58f3; /* First wave color */
+  animation: wave-animation1 8s infinite linear;
+}
+
+.wave2 {
+  fill: #00fbf7; /* Second wave color */
+  animation: wave-animation2 6s infinite linear;
+  opacity: 0.25; /* Slight transparency for layering */
+}
+
+.wave3 {
+  fill: #192e35; /* Third wave color */
+  animation: wave-animation3 6s infinite linear;
+  opacity: 0.6; /* More transparency for layering */
+}
+
+/* Define the wave animations with different speeds */
+@keyframes wave-animation1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
+
+@keyframes wave-animation2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes wave-animation3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Why Us Section
