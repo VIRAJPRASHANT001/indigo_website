@@ -6,33 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDIGO-Careers</title>
     <link rel="stylesheet" href="assets/css/carrer.css">
+    <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
+    
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    
+    <!-- <link rel="stylesheet" href="assets/css/"> -->
 
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">INDIGO CATERING & SERVICES PVT. LTD.</div>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Why us</a></li>
-                <li><a href="#">One click</a></li>
-                <!-- <li><a href="#">Company</a></li> -->
-            </ul>
-            <button class="cta-button">CONTACT US </button>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-text">
+<!-- Header placeholder -->
+<div id="header-placeholder"></div>
+<!-- Header ends -->
+<section class="carrer_hero">
+        <!-- <img src="assets/img/about-bg.jpg" alt=""> -->
+        
+        <div class="carrer_hero-text">
+            <!-- <img src="assets/img/bg image indigo.png" alt="" data-aos="fade-out"> -->
+            <!-- <div class="carrer_hero-image"></div> -->
             <h1>Careers at <span>INDIGO</span></h1>
             <p>Our Company is a leading catering service provider. We're a global group who loves solving hard problems, collaborating with each other, and building better future for all.</p>
-            <div class="hero-buttons">
+            <div class="carrer_hero-buttons">
                 <a href="#jobopening" class="btn-primary">View Openings</a>
                 <a href="#" class="btn-secondary">Meet our Teams</a>
             </div>
-        </div>
+        
+        </div> 
+        
         
             <div class="news-section">
                 <div class="news-items">
@@ -60,6 +60,7 @@
                     </div>
                 
             </div>
+        
             <!-- <div class="more-news">
                 <a href="more-news.html">
                     <img src="icon.png" alt="More News"> More News
@@ -68,7 +69,7 @@
             
         
 
-        <!-- <div class="hero-image"> -->
+        <!-- <div class="carrer_hero-image"> -->
             <!-- <img src="/HOME PAGE/assets/img/carrer.png" alt="Team Image"> -->
             
             <!-- <section id="news" class="news">
@@ -91,7 +92,7 @@
         <!-- </div> -->
     </section>
 
-
+</div>
 <!-- news section -->
 
 
@@ -241,126 +242,58 @@
                 <a href="apply-link" class="apply-button">Apply Now</a>
                 <a href="know-more-link" class="know-more-button">Know More</a>
             </div>
-        </div>
-        
-    </section>
+        </div>     
+</section>
     <!-- job opening section ends-->
 
-    <!-- <footer>
-        <div class="contact">
-            <p>Have Questions? <a href="#">Talk to a Recruiter</a></p>
-            <p>Email: <a href="mailto:recruitment@yourcompany.com">recruitment@yourcompany.com</a></p>
-        </div>
-        <div class="faq">
-            <h3>Frequently Asked Questions</h3>
-            <div class="faq-item">
-                <h4>Does YourCompany hire remotely?</h4>
-                <p>Yes, we are a globally distributed team.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Who are YourCompany’s investors?</h4>
-                <p>Our investors are leading firms in the industry.</p>
-            </div>
-            <div class="faq-item">
-                <h4>How should I prepare for interviews?</h4>
-                <p>Research our company and be ready to discuss your skills.</p>
-            </div>
-        </div>
-        <div class="social-media">
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-        </div>
-    </footer> -->
-    <script>
-        // Smooth scrolling for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+    <!-- Footer placeholder -->
+<div id="footer-placeholder">
+
+</div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+
+<!-- header footer script -->
+<script>
+    // Function to load the header
+    function loadHeader() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    }
+    
+    // Function to load the footer
+    function loadFooter() {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    }
+    
+    // Load the header and footer once the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        loadHeader();
+        loadFooter();
     });
-});
-
-// Animation on scroll for different sections
-function animateOnScroll() {
-    const sections = document.querySelectorAll('.animate-on-scroll');
-    sections.forEach(section => {
-        const sectionPosition = section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
-
-        if (sectionPosition < screenPosition) {
-            section.classList.add('animated');
-        }
-    });
-}
-
-window.addEventListener('scroll', animateOnScroll);
-
-// Initial animation call
-animateOnScroll();
-
-// Toggle FAQ answers
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-    item.addEventListener('click', function () {
-        this.classList.toggle('active');
-        const answer = this.querySelector('.faq-answer');
-
-        if (this.classList.contains('active')) {
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        } else {
-            answer.style.maxHeight = null;
-        }
-    });
-});
-
-// OUR TEAM
-const carouselSlide = document.querySelector('.carousel-slide');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const carouselDots = document.querySelectorAll('.carousel-dot');
-
-    let counter = 0;
-    const size = carouselItems[0].clientWidth;
-
-    const updateCarousel = () => {
-        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        updateDots();
-    };
-
-    const updateDots = () => {
-        carouselDots.forEach(dot => dot.classList.remove('active'));
-        carouselDots[counter].classList.add('active');
-    };
-
-    const autoSlide = () => {
-        counter = (counter + 1) % carouselItems.length;
-        updateCarousel();
-    };
-
-    carouselDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            counter = index;
-            updateCarousel();
-            stopAutoSlide();
-        });
-    });
-
-    carouselItems.forEach(item => {
-        item.addEventListener('click', () => {
-            stopAutoSlide();
-        });
-    });
-
-    const stopAutoSlide = () => {
-        clearInterval(autoSlideInterval);
-    };
-
-    updateCarousel();
-    const autoSlideInterval = setInterval(autoSlide, 3000); // Auto-slide every 3 seconds
-
-    </script>
+</script>
+    
 </body>
 
 </html>

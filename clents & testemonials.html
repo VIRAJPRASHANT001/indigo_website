@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1f1f1f;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1, h2 {
+            color: #da730d;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .client-card {
+            background-color: #fffcfc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .client-logo {
+            max-width: 100%;
+            max-height: 80px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+
+        .client-name {
+            font-size: 18px;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .client-card {
+                padding: 15px;
+            }
+            .client-name {
+                font-size: 16px;
+            }
+        }
+
+        .testimonial-slider {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #48454552;
+        }
+        /* #838282 */
+
+        .testimonial-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+
+        .testimonial-slide h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #01ef25;
+            text-align: center;
+        }
+
+        .testimonial-slide p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #06f6f6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #aa0000;
+            text-align: center;
+        }
+
+        .testimonial-nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .testimonial-nav span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #aa1a1a;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .testimonial-nav span.active {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Clients</h1>
+    <div class="client-grid">
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/alstom solid.png" alt="Client 1" class="client-logo">
+            <!-- <p class="client-name">ALSTOM</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/arvind.webp" alt="Client 2" class="client-logo">
+            <!-- <p class="client-name">ARVIND</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/Wabtec-corp-logo.png" alt="Client 3" class="client-logo">
+            <!-- <p class="client-name">WABTEC</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/Essar_logo.svg.png" alt="Client 4" class="client-logo">
+            <!-- <p class="client-name">ESSAR</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/cmpdi.png" alt="Client 5" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/General_Electric_logo.svg.png" alt="Client 6" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/LIC.png" alt="Client 7" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/IIT GUWAHATI.png" alt="Client 8" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/IIT JAMMU.png" alt="Client 9" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/IIM RANCHI SOLID.png" alt="Client 10" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/NIT_Rourkela_Colour_Logo.svg.png" alt="Client 11" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/National_Institute_of_Advanced_Manufacturing_Technology_Logo.png" alt="Client 12" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/ELECCTROSTEEL.avif" alt="Client 13" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/IIT_(ISM)_Dhanbad_Logo.svg" alt="Client 14" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/VEDL.NS-07320005.png" alt="Client 15" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/OTPC.webp" alt="Client 16" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/ONGC.jpeg" alt="Client 17" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/oilex.jpeg" alt="Client 18" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/schlumberg big logo.png" alt="Client 19" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/south west pinnaclle.png" alt="Client 20" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/quippo-1280x720.jpg" alt="Client 20" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/nit silchar.png" alt="Client 20" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <div class="client-card">
+            <img src="/HOME PAGE/assets/img/clients/essar block.jpg" alt="Client 21" class="client-logo">
+            <!-- <p class="client-name">Client 2</p> -->
+        </div>
+        <!-- Add more client cards as needed -->
+    </div>
+
+    <h2>Our Clients Testimonials</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial-container">
+            <div class="testimonial-slide">
+                <h3>CENTRAL UNIVERSITY OF JHARKHAND</h3>
+                <p>Thank you for cooperation and the excellent services rendered during the Vice Chancellor’s Day celebration on 7th August, 2010. Your team did a wonderful job, and I wish to congratulate all of them on the fine food service and the courteous service.</p>
+                <p class="testimonial-author">- Ankush Bhuyan, OSD – Planning</p>
+            </div>
+            <div class="testimonial-slide">
+                <h3>NATIONAL UNIVERSITY OF STUDY AND RESEARCH IN LAW, RANCHI</h3>
+                <p>It gives us immense pleasure to convey that the 3rd Edition of the National Trial Advocacy Competition was concluded successfully and would like to commend you for the excellent service, commitment, and support during the event.</p>
+                <p class="testimonial-author">- Rabindra Kumar Pathak, Moot Court Committee</p>
+            </div>
+            <div class="testimonial-slide">
+                <h3>KDMIPE ONGC-DEHRADUN</h3>
+                <p>Catering services for ONGC on shale Gas project at RNSG-1 drill site. Their catering services, including quality of food and quality of services with respect to hygiene, is up to the mark with very good standards.</p>
+                <p class="testimonial-author">- Dr. P.K. Mahata</p>
+            </div>
+            <div class="testimonial-slide">
+                <h3>ESSAR OFFSHORE SUBSEA LIMITED </h3>
+                <p>Have performed their duties cheerfully and diligently. During V-3 Anchorage at Mumbai and they were dedicated to make accident-free ambience on board.
+                     They have good knowledge about their job profile. Appreciation for their Excellence in preparation, display and service during New Year Celebration. Staff were found to be cordial and efficient in carrying out their duties with outstanding housekeeping services. 
+                    </p>
+                <p class="testimonial-author">- Capt. Roop Singh
+                    Barge Master 
+                    DLB Nand Gaurav 
+                    </p>
+            </div>
+            <div class="testimonial-slide">
+                <h3>ONGC TRIPURA POWER COMPANY LIMITED </h3>
+                <p>
+                    Has been rendering catering and mechanized housekeeping services by using all equipment’s to the officials with ONGC apart regular services providing special dinners during special occasions, including employee get to gather and board meetings etc.
+                </p>
+                <p class="testimonial-author">- Shiv Kumar Bhagat
+                    Manager HR&A -ONGC
+                </p>
+            </div>
+            <div class="testimonial-slide">
+                <h3>WABTEC CORPORATION</h3>
+                <p>The service has been good so far. We wish them all the best for all the future assignments.</p>
+                <p class="testimonial-author">- WABTECH</p>
+            </div>
+            <!-- Add more testimonial slides as needed -->
+        </div>
+    </div>
+
+    <div class="testimonial-nav">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <!-- Add more dots as needed -->
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-nav span');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const sliderWidth = document.querySelector('.testimonial-slider').clientWidth;
+            document.querySelector('.testimonial-container').style.transform = `translateX(-${index * sliderWidth}px)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                showSlide(currentIndex);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -143,7 +143,7 @@ color: #c16311;
 
 .accordion-body {
     padding: 20px;
-    background-color: #3f3b3b;
+    background-color: #4d4a4a;
     color: #ddd;
     display: none;
 }
@@ -215,7 +215,10 @@ font-style: #943333;
 </style>
 </head>
 <body>
-    <!-- <div id="header"></div> -->
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+    <!-- Header ends -->
+     <div>FAQ</div>
     <section class="faq-section">
         
         <div class="container">
@@ -308,7 +311,10 @@ font-style: #943333;
             </div>
         </div>
     </section>
- <div id="footer"></div>
+     <!-- Footer placeholder -->
+<div id="footer-placeholder">
+
+</div>
 
     <script>
         // Load header and footer
@@ -344,7 +350,35 @@ font-style: #943333;
                 });
             });
         });
+    
+        // Function to load the header
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+        
+        // Function to load the footer
+        function loadFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+        
+        // Load the header and footer once the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadHeader();
+            loadFooter();
+        });
     </script>
+        
+
 </body>
 </html>
 
