@@ -1,74 +1,46 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0909da;
-    color: #fffdfd;
+
+.body {
+    font-family: 'Arial', sans-serif;   
 }
 
-header {
-    background-color: #191b36;
-    padding: 10px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.cta-button {
-    background-color: #5865f2;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.hero {
+.carrer_hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 50px;
     background: linear-gradient(45deg, #1f2241, #2c2f55);
+    margin-top: 140px;
 }
 
-.hero-text {
+.carrer_hero-text {
     max-width: 600px;
 }
+.carrer_hero-image {
+    background-image: url("/assets/img/about\ us-Photoroom.png");
+    background-color: #832f2f;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 
-.hero-text h1 {
+.carrer_hero-text h1 {
     font-size: 56px;
     margin: 0;
 }
 
-.hero-text h1 span {
+.carrer_hero-text h1 span {
     color: #33a2ff;
 }
 
-.hero-text p {
+.carrer_hero-text p {
     font-size: 18px;
     line-height: 1.5;
     margin: 20px 0;
 }
 
-.hero-buttons {
+.carrer_hero-buttons {
     display: flex;
     gap: 15px;
 }
@@ -101,7 +73,7 @@ nav ul li a {
     color: #fff;
 }
 
-.hero-image img {
+.carrer_hero-image img {
     width: 400px;
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
