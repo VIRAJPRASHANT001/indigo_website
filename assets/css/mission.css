@@ -1,3 +1,65 @@
+.vision_mission h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.vision_mission p {
+    font-size: 1rem;
+}
+
+/* Image hover effect */
+.icon {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Scale image by 10% on hover */
+}
+
+/* Core values section */
+.corevaluecontainer {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.corevalueheader h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.corevalueheader h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.value-card {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+}
+
+.value-card img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.value-card img:hover {
+    transform: scale(1.2); /* Increase size by 20% on hover */
+}
+
+.value-card h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.value-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+
+
 
 .vision_mission{
     padding-top:120px;
